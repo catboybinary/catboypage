@@ -1,13 +1,13 @@
 <script>
 	import { page } from '$app/stores';
-	let { href, label = 'BUTTON', icon } = $props();
+	let { href, label, children } = $props();
 	let active = $derived($page.url.pathname === href);
 </script>
 
 <a {href}>
 	<div class:active>
-		{#if icon}
-			<span class="icon">{@render icon()}</span>
+		{#if children}
+			<span class="icon">{@render children()}</span>
 		{/if}
 		{label}
 	</div>
@@ -16,7 +16,6 @@
 <style>
 	.icon {
 		color: var(--text-shadow);
-		background-color: var(--text-color);
 		transition:
 			color 0.1s,
 			background-color 0.1s;
@@ -25,7 +24,16 @@
 		align-items: center;
 	}
 
-	.icon :global(svg) {
+	.icon:has(:global(svg)) {
+		background-color: var(--text-color);
+	}
+
+	.icon:has(:global(img)) {
+		filter: sepia(75%);
+	}
+
+	.icon :global(svg),
+	.icon :global(img) {
 		height: 100%;
 		width: auto;
 	}
@@ -48,7 +56,7 @@
 			padding-bottom 0.2s;
 		width: fit-content;
 		line-height: 1em;
-		min-width: 240px;
+		min-width: var(--min-width);
 		letter-spacing: 0.125rem;
 		font-size: 2rem;
 		position: relative;
@@ -80,6 +88,9 @@
 
 		.icon {
 			color: var(--text-color);
+		}
+
+		.icon:has(:global(svg)) {
 			background-color: var(--primary-color);
 		}
 	}
@@ -93,6 +104,9 @@
 
 		.icon {
 			color: var(--text-color);
+		}
+
+		.icon:has(:global(svg)) {
 			background-color: var(--primary-color);
 		}
 	}

@@ -63,3 +63,14 @@ h1 {
 	letter-spacing: 0.25rem;
 	text-shadow: var(--text-shadow) 0.15em 0.15em;
 }
+
+@keyframes expand {
+	0% {
+		transform: scaleY(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scaleY(1);
+		opacity: 1;
+	}
+}

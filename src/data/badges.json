@@ -1,0 +1,64 @@
+{
+	"badges": [
+		{
+			"id": 0,
+			"src": "/images/catboybinary.gif",
+			"href": "https://home.catboy.page/",
+			"name": "catboybinary"
+		},
+		{
+			"id": 1,
+			"src": "https://jsopn.com/images/88x31/button.gif",
+			"href": "https://jsopn.com/?glunging=true",
+			"name": "jsopn"
+		},
+		{
+			"id": 2,
+			"src": "https://senko.dev/banners/senko.gif",
+			"href": "https://senko.dev/",
+			"name": "senkodev"
+		},
+		{
+			"id": 3,
+			"src": "https://otomir23.me/88x31.png",
+			"href": "https://otomir23.me/",
+			"name": "otomir23"
+		},
+		{
+			"id": 4,
+			"src": "https://nikableh.moe/88x31.png",
+			"href": "https://nikableh.moe/",
+			"name": "nikableh"
+		},
+		{
+			"id": 5,
+			"src": "https://asyasocute.online/badges/cowl.png",
+			"href": "https://asyasocute.online/",
+			"name": "asyasocute"
+		},
+		{
+			"id": 6,
+			"src": "https://keetsta.me/88x31.png",
+			"href": "https://keetsta.me/",
+			"name": "keetsta"
+		},
+		{
+			"id": 7,
+			"src": "https://keetsta.me/buttons/akarpov.gif",
+			"href": "https://akarpov.ru/",
+			"name": "akarpov"
+		},
+		{
+			"id": 8,
+			"src": "https://tarakoshka.tech/static/88x31.gif",
+			"href": "https://tarakoshka.tech/",
+			"name": "tarakoshka"
+		},
+		{
+			"id": 9,
+			"src": "https://edwardcode.net/www/button.gif",
+			"href": "https://edwardcode.net/",
+			"name": "edwardcode"
+		}
+	]
+}

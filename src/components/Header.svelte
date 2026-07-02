@@ -18,19 +18,19 @@
 {/snippet}
 
 <div>
-	<TabButton href="/" icon={homeIcon} label="HOME" />
-	<TabButton href="/test" icon={homeIcon} label="TEST" />
+	<TabButton href="/" children={homeIcon} label="HOME" />
+	<TabButton href="/test" children={homeIcon} label="TEST" />
 </div>
 
 <style>
 	div {
 		--header-gap: 16px;
+		--min-width: 240px;
 		padding-bottom: var(--header-gap);
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
 		width: 100%;
 		column-gap: 48px;
 		border-bottom: 2px solid var(--text-color);

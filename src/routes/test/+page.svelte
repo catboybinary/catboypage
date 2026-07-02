@@ -1,14 +1,1 @@
-<script>
-	import ButtonList from '../../components/ButtonList.svelte';
-</script>
-
-<h1>woah...</h1>
-<div class="wrapper">
-	<ButtonList />
-</div>
-
-<style>
-	.wrapper {
-		translate: -20% 0px;
-	}
-</style>
+<h1>woah... i'm NieR-ing it rn lowk</h1>

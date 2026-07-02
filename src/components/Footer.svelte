@@ -79,13 +79,14 @@
 {/snippet}
 
 <div>
-	<TabButton {...prev} icon={leftIcon} />
-	<TabButton label="OTORING" icon={webringIcon} href="https://webring.otomir23.me/" />
-	<TabButton {...next} icon={rightIcon} />
+	<TabButton {...prev} children={leftIcon} />
+	<TabButton label="OTORING" children={webringIcon} href="https://webring.otomir23.me/" />
+	<TabButton {...next} children={rightIcon} />
 </div>
 
 <style>
 	div {
+		--min-width: 240px;
 		padding-top: 16px;
 		margin-left: auto;
 		margin-right: auto;
