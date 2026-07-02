@@ -1,0 +1,11 @@
+[Unit]
+Description=catboypage Node.js server
+
+[Service]
+Type=simple
+ExecStart=node build
+WorkingDirectory=/root/catboypage
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

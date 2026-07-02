@@ -1,0 +1,7 @@
+[Unit]
+Description=Auto-deploy catboypage on new commits
+
+[Service]
+Type=oneshot
+ExecStart=/root/catboypage/scripts/deploy.sh
+WorkingDirectory=/root/catboypage
