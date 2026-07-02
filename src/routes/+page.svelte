@@ -1,4 +1,4 @@
-<h1>WELCOME TO SVELTEKIT</h1>
+<h1>CATBOYBINARY</h1>
 <p>
 	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus libero consequuntur, odio
 	corporis ipsam molestiae quasi dignissimos blanditiis! Sunt quisquam enim eaque odio, tempora

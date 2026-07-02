@@ -4,15 +4,15 @@ html {
 	--background-color: #cfcaac;
 	--primary-color: #d9d3b1;
 	--text-color: #504c41;
-	--text-shadow: #504c413a;
+	--text-shadow: #b1ad93;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 	html {
 		--background-color: #3f3c34;
 		--primary-color: #504c41;
 		--text-color: #d9d3b1;
-		--text-shadow: #d9d3b13a;
+		--text-shadow: #636052;
 	}
 }
 

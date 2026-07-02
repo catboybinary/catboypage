@@ -16,8 +16,14 @@
 <style>
 	img {
 		height: 1em;
-		filter: sepia(100%) grayscale(50%) brightness(90%);
-		transition: filter 0.2s;
+		filter: sepia(100%) grayscale(50%);
+		background-color: var(--text-color);
+		transition:
+			filter 0.2s,
+			background-color 0.2s;
+		border: 3px;
+		margin-left: 4px;
+		padding: 4px;
 	}
 
 	div {
@@ -30,7 +36,7 @@
 		background-color: var(--text-shadow);
 		color: var(--text-color);
 		transition:
-			background-size 0.2s,
+			background-size 0.175s,
 			color 0.1s;
 		width: fit-content;
 		min-width: 240px;
@@ -66,7 +72,7 @@
 		color: var(--primary-color);
 
 		img {
-			filter: sepia(100%) grayscale(50%) brightness(115%);
+			background-color: var(--text-shadow);
 		}
 	}
 
