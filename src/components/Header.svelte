@@ -25,6 +25,8 @@
 	div {
 		margin-top: 8px;
 		margin-bottom: 16px;
+		margin-left: auto;
+		margin-right: auto;
 		display: flex;
 		flex-direction: row;
 		column-gap: 48px;

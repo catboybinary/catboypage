@@ -10,12 +10,23 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<Header />
-{@render children()}
-<Footer />
+<div class="layout">
+	<Header />
+	<div class="content">{@render children()}</div>
+	<Footer />
+</div>
 
 <style>
-	:global html {
-		padding: 16px;
+	.layout {
+		display: flex;
+		max-width: min-content;
+		min-width: 50%;
+		flex-direction: column;
+		min-height: 100%;
+		margin: auto;
+	}
+
+	.content {
+		flex: 1;
 	}
 </style>

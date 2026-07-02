@@ -87,6 +87,8 @@
 <style>
 	div {
 		margin-top: 16px;
+		margin-left: auto;
+		margin-right: auto;
 		display: flex;
 		flex-direction: row;
 		column-gap: 48px;
