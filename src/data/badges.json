@@ -71,6 +71,18 @@
 			"src": "/images/eversiege.png",
 			"href": "https://eversiege.network/",
 			"name": "eversiege"
+		},
+		{
+			"id": 12,
+			"src": "https://glutesha.me/badges/interactive/glutesha.png",
+			"href": "https://glutesha.me/",
+			"name": "glutesha"
+		},
+		{
+			"id": 13,
+			"src": "https://senko.digital/images/88x31/hosted_on.png",
+			"href": "https://senko.digital/",
+			"name": "senko.digital"
 		}
 	]
 }
