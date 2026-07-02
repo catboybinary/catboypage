@@ -24,7 +24,7 @@
 
 <style>
 	div {
-		--header-gap: 24px;
+		--header-gap: 16px;
 		padding-bottom: var(--header-gap);
 		margin-left: auto;
 		margin-right: auto;
