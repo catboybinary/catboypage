@@ -21,7 +21,7 @@ body {
 	box-shadow: 4px 4px var(--text-shadow);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 	html {
 		--background-color: #3f3c34;
 		--background-grid-color: #d9d3b10f;

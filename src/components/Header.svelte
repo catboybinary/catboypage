@@ -19,11 +19,13 @@
 
 <div>
 	<TabButton href="/" icon={homeIcon} label="HOME" />
+	<TabButton href="/test" icon={homeIcon} label="TEST" />
 </div>
 
 <style>
 	div {
-		padding-bottom: 24px;
+		--header-gap: 24px;
+		padding-bottom: var(--header-gap);
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;

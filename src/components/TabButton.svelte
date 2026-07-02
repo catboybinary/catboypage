@@ -1,9 +1,11 @@
 <script>
+	import { page } from '$app/stores';
 	let { href, label = 'BUTTON', icon } = $props();
+	let active = $derived($page.url.pathname === href);
 </script>
 
 <a {href}>
-	<div>
+	<div class:active>
 		{#if icon}
 			<span class="icon">{@render icon()}</span>
 		{:else}
@@ -43,7 +45,9 @@
 		color: var(--text-color);
 		transition:
 			background-size 0.175s,
-			color 0.1s;
+			color 0.1s,
+			margin-bottom 0.2s,
+			padding-bottom 0.2s;
 		width: fit-content;
 		line-height: 1em;
 		min-width: 240px;
@@ -82,8 +86,33 @@
 		}
 	}
 
-	div:hover::before,
-	div:hover::after {
+	div.active {
+		margin-bottom: calc(0px - var(--header-gap, 0px));
+		padding-bottom: calc(0.6rem + var(--header-gap, 0px));
+		background-size: 100% 100%;
+		color: var(--primary-color);
+		animation: pulse 2s ease-in-out infinite;
+
+		.icon {
+			color: var(--text-color);
+			background-color: var(--primary-color);
+		}
+	}
+
+	@keyframes pulse {
+		0%,
+		25%,
+		50%,
+		100% {
+			opacity: 1;
+		}
+		75% {
+			opacity: 0.75;
+		}
+	}
+
+	div:not(.active):hover::before,
+	div:not(.active):hover::after {
 		background-color: var(--text-color);
 	}
 </style>
