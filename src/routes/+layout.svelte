@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import './fonts.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
 
@@ -20,7 +20,7 @@
 	.layout {
 		display: flex;
 		max-width: min-content;
-		min-width: 50%;
+		min-width: 256px;
 		flex-direction: column;
 		min-height: 100%;
 		margin: auto;
