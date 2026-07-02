@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+html {
+	--background-color: #cfcaac;
+	--primary-color: #d9d3b1;
+	--text-color: #504c41;
+	--text-shadow: #504c413a;
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		--background-color: #3f3c34;
+		--primary-color: #504c41;
+		--text-color: #d9d3b1;
+		--text-shadow: #d9d3b13a;
+	}
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: 'Rodin Pro';
+	font-size: 2rem;
+}
+
+h1 {
+	font-size: 3rem;
+	letter-spacing: 0.45rem;
+	text-shadow: var(--text-shadow) 0.15em 0.15em;
+}
