@@ -10,7 +10,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<div class="layout">
+<div class="layout panel">
 	<Header />
 	<div class="content">{@render children()}</div>
 	<Footer />
@@ -24,6 +24,7 @@
 		flex-direction: column;
 		min-height: 100%;
 		margin: auto;
+		padding: 16px;
 	}
 
 	.content {

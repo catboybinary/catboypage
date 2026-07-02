@@ -42,7 +42,7 @@
 		stroke="currentColor"
 		stroke-width="2.75"
 		stroke-linecap="square"
-		stroke-linejoin="bevel"><path d="m19 4-14 8 14 8" /></svg
+		stroke-linejoin="bevel"><path d="m15 6-8 6 8 6" /></svg
 	>
 {/snippet}
 
@@ -51,10 +51,10 @@
 		xmlns="http://www.w3.org/2000/svg"
 		width="24"
 		height="24"
-		viewBox="0 0 24 24"
+		viewBox="-3 -3 30 30"
 		fill="none"
 		stroke="currentColor"
-		stroke-width="2.25"
+		stroke-width="2.5"
 		stroke-linecap="round"
 		stroke-linejoin="round"
 		class="lucide lucide-globe-icon lucide-globe"
@@ -74,7 +74,7 @@
 		stroke="currentColor"
 		stroke-width="2.75"
 		stroke-linecap="square"
-		stroke-linejoin="bevel"><path d="m5 20 14-8-14-8" /></svg
+		stroke-linejoin="bevel"><path d="m9 18 8-6-8-6" /></svg
 	>
 {/snippet}
 
@@ -86,11 +86,12 @@
 
 <style>
 	div {
-		margin-top: 16px;
+		padding-top: 16px;
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;
 		flex-direction: row;
 		column-gap: 48px;
+		border-top: 2px solid var(--text-color);
 	}
 </style>

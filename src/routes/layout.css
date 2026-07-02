@@ -5,7 +5,7 @@ html {
 	--background-grid-color: #504c410f;
 	--primary-color: #d9d3b1;
 	--text-color: #504c41;
-	--text-shadow: #504c413a;
+	--text-shadow: #bab498;
 	height: 100%;
 	padding: 16px;
 	box-sizing: border-box;
@@ -16,27 +16,40 @@ body {
 	margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
+.panel {
+	background-color: var(--primary-color);
+	box-shadow: 4px 4px var(--text-shadow);
+}
+
+@media (prefers-color-scheme: light) {
 	html {
 		--background-color: #3f3c34;
 		--background-grid-color: #d9d3b10f;
 		--primary-color: #504c41;
 		--text-color: #d9d3b1;
-		--text-shadow: #d9d3b13a;
+		--text-shadow: #6f6b5a;
 	}
 }
 
 body {
 	background-color: var(--background-color);
-	background-image:
-		linear-gradient(to right, var(--background-grid-color) 2px, transparent 2px),
-		linear-gradient(to bottom, var(--background-grid-color) 2px, transparent 2px);
-	background-size: 9px 9px;
 	color: var(--text-color);
 	font-family: 'InterVariable';
 	font-weight: 500;
 	font-size: 24px;
 	height: 100%;
+}
+
+body::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	pointer-events: none;
+	background-image:
+		linear-gradient(to right, var(--background-grid-color) 2px, transparent 2px),
+		linear-gradient(to bottom, var(--background-grid-color) 2px, transparent 2px);
+	background-size: 9px 9px;
 }
 
 h1 {

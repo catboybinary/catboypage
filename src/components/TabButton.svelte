@@ -15,8 +15,11 @@
 
 <style>
 	.icon {
-		color: var(--text-color);
-		transition: color 0.2s;
+		color: var(--text-shadow);
+		background-color: var(--text-color);
+		transition:
+			color 0.1s,
+			background-color 0.1s;
 		height: 1em;
 		display: flex;
 		align-items: center;
@@ -74,7 +77,8 @@
 		color: var(--primary-color);
 
 		.icon {
-			color: var(--primary-color);
+			color: var(--text-color);
+			background-color: var(--primary-color);
 		}
 	}
 
