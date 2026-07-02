@@ -5,8 +5,6 @@ REPO_DIR="/root/catboypage"
 BRANCH="main"
 REMOTE="origin"
 
-nvm use 24
-
 cd "$REPO_DIR"
 
 git fetch "$REMOTE" "$BRANCH"
