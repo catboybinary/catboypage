@@ -40,6 +40,10 @@ body {
 	height: 100%;
 }
 
+p {
+	font-family: 'Rubik';
+}
+
 body::after {
 	content: '';
 	position: fixed;
