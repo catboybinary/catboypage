@@ -8,8 +8,6 @@
 	<div class:active>
 		{#if icon}
 			<span class="icon">{@render icon()}</span>
-		{:else}
-			[ ]
 		{/if}
 		{label}
 	</div>
