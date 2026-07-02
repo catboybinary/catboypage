@@ -1,11 +1,11 @@
 <script>
-	let { href, label = 'BUTTON', icon = '' } = $props();
+	let { href, label = 'BUTTON', icon } = $props();
 </script>
 
 <a {href}>
 	<div>
 		{#if icon}
-			<span class="icon"><img src={icon} alt="no icon" /></span>
+			<span class="icon">{@render icon()}</span>
 		{:else}
 			[ ]
 		{/if}
@@ -15,15 +15,16 @@
 
 <style>
 	.icon {
-		background-color: var(--text-color);
-		transition: background-color 0.2s;
-		padding: 4px;
+		color: var(--text-color);
+		transition: color 0.2s;
 		height: 1em;
 		display: flex;
+		align-items: center;
 	}
 
-	img {
-		filter: sepia(100%) grayscale(50%);
+	.icon :global(svg) {
+		height: 100%;
+		width: auto;
 	}
 
 	div {
@@ -73,7 +74,7 @@
 		color: var(--primary-color);
 
 		.icon {
-			background-color: var(--primary-color);
+			color: var(--primary-color);
 		}
 	}
 

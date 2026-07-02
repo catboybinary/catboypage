@@ -2,22 +2,28 @@
 
 html {
 	--background-color: #cfcaac;
+	--background-grid-color: #c6c3a4;
 	--primary-color: #d9d3b1;
 	--text-color: #504c41;
-	--text-shadow: #b1ad93;
+	--text-shadow: #504c413a;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 	html {
 		--background-color: #3f3c34;
+		--background-grid-color: #4a473e;
 		--primary-color: #504c41;
 		--text-color: #d9d3b1;
-		--text-shadow: #636052;
+		--text-shadow: #d9d3b13a;
 	}
 }
 
 body {
 	background-color: var(--background-color);
+	background-image:
+		linear-gradient(to right, var(--background-grid-color) 2px, transparent 2px),
+		linear-gradient(to bottom, var(--background-grid-color) 2px, transparent 2px);
+	background-size: 9px 9px;
 	color: var(--text-color);
 	font-family: 'Rodin Pro';
 	font-size: 1rem;

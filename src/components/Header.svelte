@@ -1,52 +1,24 @@
 <script>
 	import TabButton from './TabButton.svelte';
-
-	let prev = $state({
-		label: '...',
-		icon: '',
-		href: 'https://webring.otomir23.me/catboybinary/prev'
-	});
-	let next = $state({
-		label: '...',
-		icon: '',
-		href: 'https://webring.otomir23.me/catboybinary/next'
-	});
-	let curr = $state({ icon: '' });
-
-	$effect(() => {
-		fetch('https://webring.otomir23.me/catboybinary/data')
-			.then((r) => r.json())
-			.then((data) => {
-				const resolve = (favicon) => {
-					if (!favicon) return '';
-					return new URL(favicon, 'https://webring.otomir23.me/media/').href;
-				};
-				prev = {
-					label: (data.prev?.name ?? 'PREV').toUpperCase(),
-					icon: resolve(data.prev?.favicon),
-					href: data.prev?.url ?? 'https://webring.otomir23.me/catboybinary/prev'
-				};
-				next = {
-					label: (data.next?.name ?? 'NEXT').toUpperCase(),
-					icon: resolve(data.next?.favicon),
-					href: data.next?.url ?? 'https://webring.otomir23.me/catboybinary/next'
-				};
-				curr = {
-					icon: resolve(data.curr?.favicon)
-				};
-			})
-			.catch(() => {
-				prev = { label: 'PREV', icon: '', href: 'https://webring.otomir23.me/catboybinary/prev' };
-				next = { label: 'NEXT', icon: '', href: 'https://webring.otomir23.me/catboybinary/next' };
-				curr = { icon: '' };
-			});
-	});
 </script>
 
+{#snippet homeIcon()}
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		fill="none"
+		stroke="currentColor"
+		stroke-width="2.25"
+		stroke-linecap="square"
+		stroke-linejoin="miter"
+		><path d="M3 10 L12 3 L21 10 L21 21 L15 21 L15 13 L9 13 L9 21 L3 21 Z" /></svg
+	>
+{/snippet}
+
 <div>
-	<TabButton {...prev} />
-	<TabButton href="/" label="HOME" icon={curr.icon} />
-	<TabButton {...next} />
+	<TabButton href="/" icon={homeIcon} label="HOME" />
 </div>
 
 <style>
