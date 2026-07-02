@@ -11,23 +11,30 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<div class="layout panel">
-	<Header />
-	<div class="content">{@render children()}</div>
-	<Footer />
-</div>
+<div class="page">
+	<div class="wrapper">
+		<BadgeList />
+	</div>
 
-<div class="wrapper">
-	<BadgeList />
+	<div class="layout panel">
+		<Header />
+		<div class="content">{@render children()}</div>
+		<Footer />
+	</div>
 </div>
 
 <style>
+	.page {
+		display: grid;
+		grid-template-columns: max-content max-content;
+		justify-content: center;
+		align-items: start;
+		column-gap: 16px;
+		min-height: 100%;
+	}
+
 	.wrapper {
 		width: fit-content;
-		margin-left: auto;
-		position: absolute;
-		top: 16px;
-		right: 16px;
 	}
 
 	.layout {
@@ -36,7 +43,6 @@
 		min-width: 256px;
 		flex-direction: column;
 		min-height: 100%;
-		margin: auto;
 		padding: 16px;
 	}
 
