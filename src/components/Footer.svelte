@@ -88,6 +88,7 @@
 	div {
 		--min-width: 240px;
 		padding-top: 16px;
+		margin-top: 16px;
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;

@@ -59,6 +59,18 @@
 			"src": "https://edwardcode.net/www/button.gif",
 			"href": "https://edwardcode.net/",
 			"name": "edwardcode"
+		},
+		{
+			"id": 10,
+			"src": "https://sshi.pw/badge.png",
+			"href": "https://sshi.pw/",
+			"name": "subarashi"
+		},
+		{
+			"id": 11,
+			"src": "/images/eversiege.png",
+			"href": "https://eversiege.network/",
+			"name": "eversiege"
 		}
 	]
 }

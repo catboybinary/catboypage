@@ -27,6 +27,7 @@
 		--header-gap: 16px;
 		--min-width: 240px;
 		padding-bottom: var(--header-gap);
+		margin-bottom: var(--header-gap);
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;

@@ -4,6 +4,7 @@
 	import favicon from '$lib/assets/favicon.png';
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
+	import BadgeList from '../components/BadgeList.svelte';
 
 	let { children } = $props();
 </script>
@@ -16,7 +17,19 @@
 	<Footer />
 </div>
 
+<div class="wrapper">
+	<BadgeList />
+</div>
+
 <style>
+	.wrapper {
+		width: fit-content;
+		margin-left: auto;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+	}
+
 	.layout {
 		display: flex;
 		max-width: min-content;
