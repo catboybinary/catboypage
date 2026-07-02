@@ -1,9 +1,8 @@
 #!/usr/bin/env fish
-set -euo pipefail
 
-REPO_DIR="/root/catboypage"
-BRANCH="main"
-REMOTE="origin"
+set REPO_DIR "/root/catboypage"
+set BRANCH "main"
+set REMOTE "origin"
 
 nvm use 24
 
@@ -11,8 +10,8 @@ cd "$REPO_DIR"
 
 git fetch "$REMOTE" "$BRANCH"
 
-LOCAL=$(git rev-parse HEAD)
-REMOTE_HASH=$(git rev-parse "$REMOTE/$BRANCH")
+set LOCAL $(git rev-parse HEAD)
+set REMOTE_HASH $(git rev-parse "$REMOTE/$BRANCH")
 
 if [ "$LOCAL" != "$REMOTE_HASH" ]; then
 	echo "[$(date -Is)] New commit detected, building..."
