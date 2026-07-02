@@ -2,6 +2,7 @@
 set -euo pipefail
 
 REPO_DIR="/root/catboypage"
+NPM="/root/.local/share/nvm/v24.18.0/bin/npm"
 BRANCH="main"
 REMOTE="origin"
 
@@ -15,8 +16,8 @@ REMOTE_HASH=$(git rev-parse "$REMOTE/$BRANCH")
 if [ "$LOCAL" != "$REMOTE_HASH" ]; then
 	echo "[$(date -Is)] New commit detected, building..."
 	git pull "$REMOTE" "$BRANCH"
-	npm ci
-	npm run build
+	$NPM ci
+	$NPM run build
 	systemctl restart catboypage-server
 	echo "[$(date -Is)] Deploy complete."
 else
