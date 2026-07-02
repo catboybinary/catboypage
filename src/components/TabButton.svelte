@@ -5,7 +5,7 @@
 <a {href}>
 	<div>
 		{#if icon}
-			<img src={icon} alt="no icon" />
+			<span class="icon"><img src={icon} alt="no icon" /></span>
 		{:else}
 			[ ]
 		{/if}
@@ -14,22 +14,24 @@
 </a>
 
 <style>
-	img {
-		height: 1em;
-		filter: sepia(100%) grayscale(50%);
+	.icon {
 		background-color: var(--text-color);
-		transition:
-			filter 0.2s,
-			background-color 0.2s;
-		border: 3px;
-		margin-left: 4px;
+		transition: background-color 0.2s;
 		padding: 4px;
+		height: 1em;
+		display: flex;
+	}
+
+	img {
+		filter: sepia(100%) grayscale(50%);
 	}
 
 	div {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		gap: 0.3em;
+		padding: 0.6rem;
 		background-image: linear-gradient(to right, var(--text-color), var(--text-color));
 		background-size: 0% 100%;
 		background-repeat: no-repeat;
@@ -39,12 +41,11 @@
 			background-size 0.175s,
 			color 0.1s;
 		width: fit-content;
+		line-height: 1em;
 		min-width: 240px;
-		padding: 0.4rem;
 		letter-spacing: 0.125rem;
+		font-size: 2rem;
 		position: relative;
-		display: flex;
-		flex-direction: row;
 	}
 
 	div::before,
@@ -71,8 +72,8 @@
 		background-size: 100% 100%;
 		color: var(--primary-color);
 
-		img {
-			background-color: var(--text-shadow);
+		.icon {
+			background-color: var(--primary-color);
 		}
 	}
 

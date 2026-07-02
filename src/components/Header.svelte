@@ -52,7 +52,7 @@
 <style>
 	div {
 		margin-top: 8px;
-		margin-bottom: 8px;
+		margin-bottom: 16px;
 		display: flex;
 		flex-direction: row;
 		column-gap: 48px;
