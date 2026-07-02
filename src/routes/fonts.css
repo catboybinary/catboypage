@@ -1,11 +1,4 @@
 @font-face {
-	font-family: 'Rodin Pro';
-	font-weight: normal;
-	font-style: normal;
-	src: url('/fonts/FOT-Rodin Pro DB.otf') format('opentype');
-}
-
-@font-face {
 	font-family: 'NewCezanne Pro';
 	font-weight: normal;
 	font-style: normal;
