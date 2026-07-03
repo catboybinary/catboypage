@@ -39,7 +39,7 @@
 
 	.layout {
 		display: flex;
-		max-width: min-content;
+		max-width: 848px;
 		min-width: 256px;
 		flex-direction: column;
 		min-height: 100%;

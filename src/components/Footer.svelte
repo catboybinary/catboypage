@@ -94,6 +94,8 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		overflow-x: scroll;
+		overflow-y: hidden;
 		width: 100%;
 		column-gap: 48px;
 		border-top: 2px solid var(--text-color);

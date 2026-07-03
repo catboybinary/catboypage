@@ -32,6 +32,8 @@
 		margin-right: auto;
 		display: flex;
 		flex-direction: row;
+		overflow-x: scroll;
+		overflow-y: hidden;
 		width: 100%;
 		column-gap: 48px;
 		border-bottom: 2px solid var(--text-color);

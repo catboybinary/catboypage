@@ -4,6 +4,7 @@
 </script>
 
 <div class="panel">
+	<p style="font-family: 'ITC Benguiat Book'; letter-spacing: 0.15rem; font-size: 32px;">frens:</p>
 	{#each badges as badge (badge.id)}
 		<TabButton href={badge.href}>
 			<img style="image-rendering: pixelated;" src={badge.src} alt="" />
