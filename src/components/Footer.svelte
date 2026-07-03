@@ -107,7 +107,7 @@
 		}
 
 		@media (max-width: 515px) {
-			:global(span) {
+			div :global(.label) {
 				display: none;
 			}
 		}
