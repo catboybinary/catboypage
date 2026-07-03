@@ -37,7 +37,7 @@
 		div {
 			max-height: none;
 			padding: 16px;
-			gap: 8px;
+			gap: 16px 8px;
 			width: 100%;
 			flex-flow: wrap;
 			justify-content: center;
