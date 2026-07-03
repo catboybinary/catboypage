@@ -9,7 +9,7 @@
 		{#if children}
 			<span class="icon">{@render children()}</span>
 		{/if}
-		{label}
+		<span class="label">{label}</span>
 	</div>
 </a>
 
@@ -48,6 +48,7 @@
 		background-size: 0% 100%;
 		background-repeat: no-repeat;
 		background-color: var(--text-shadow);
+		text-wrap-mode: nowrap;
 		color: var(--text-color);
 		transition:
 			background-size 0.175s,

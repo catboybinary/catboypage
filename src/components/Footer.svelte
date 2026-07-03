@@ -105,5 +105,11 @@
 			column-gap: 16px;
 			justify-content: center;
 		}
+
+		@media (max-width: 515px) {
+			:global(span) {
+				display: none;
+			}
+		}
 	}
 </style>
