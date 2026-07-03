@@ -64,6 +64,16 @@ h1 {
 	text-shadow: var(--text-shadow) 0.15em 0.15em;
 }
 
+@media (max-width: 848px) {
+	body {
+		font-size: 18px;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+}
+
 @keyframes expand {
 	0% {
 		transform: scaleY(0);

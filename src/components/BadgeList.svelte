@@ -18,7 +18,8 @@
 		max-height: calc(100dvh - 32px);
 		padding: 16px;
 		width: fit-content;
-		display: grid;
+		display: flex;
+		flex-flow: column;
 		overflow-y: scroll;
 
 		transform-origin: top;
@@ -30,5 +31,25 @@
 	div :global(a) {
 		display: block;
 		break-inside: avoid;
+	}
+
+	@media (max-width: 848px) {
+		div {
+			max-height: none;
+			padding: 16px;
+			gap: 8px;
+			width: 100%;
+			flex-flow: wrap;
+			justify-content: center;
+			overflow-y: visible;
+
+			p {
+				display: none;
+			}
+		}
+
+		div :global(a) {
+			margin-bottom: 0;
+		}
 	}
 </style>

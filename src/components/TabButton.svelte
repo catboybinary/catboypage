@@ -127,4 +127,25 @@
 	div:not(.active):hover::after {
 		background-color: var(--text-color);
 	}
+
+	@media (max-width: 848px) {
+		div {
+			font-size: 1.25rem;
+			padding: 0.4rem 0.5rem;
+			min-width: var(--min-width-mobile, auto);
+		}
+
+		div::before,
+		div::after {
+			height: 2px;
+		}
+
+		div::before {
+			top: -6px;
+		}
+
+		div::after {
+			bottom: -6px;
+		}
+	}
 </style>

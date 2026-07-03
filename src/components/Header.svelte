@@ -38,4 +38,10 @@
 		column-gap: 48px;
 		border-bottom: 2px solid var(--text-color);
 	}
+
+	@media (max-width: 848px) {
+		div {
+			column-gap: 16px;
+		}
+	}
 </style>
