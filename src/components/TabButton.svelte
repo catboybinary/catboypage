@@ -9,7 +9,9 @@
 		{#if children}
 			<span class="icon">{@render children()}</span>
 		{/if}
-		<span class="label">{label}</span>
+		{#if label}
+			<span class="label">{label}</span>
+		{/if}
 	</div>
 </a>
 
