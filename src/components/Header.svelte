@@ -19,7 +19,6 @@
 
 <div>
 	<TabButton href="/" children={homeIcon} label="HOME" />
-	<TabButton href="/test" children={homeIcon} label="TEST" />
 </div>
 
 <style>
