@@ -96,6 +96,9 @@
 		.icon:has(:global(svg)) {
 			background-color: var(--primary-color);
 		}
+
+		--selection-background: var(--background-color);
+		--selection-color: var(--text-color);
 	}
 
 	div.active {
@@ -112,6 +115,9 @@
 		.icon:has(:global(svg)) {
 			background-color: var(--primary-color);
 		}
+
+		--selection-background: var(--background-color);
+		--selection-color: var(--text-color);
 	}
 
 	@keyframes pulse {

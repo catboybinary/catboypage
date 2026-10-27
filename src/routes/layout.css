@@ -6,6 +6,9 @@ html {
 	--primary-color: #d9d3b1;
 	--text-color: #504c41;
 	--text-shadow: #bab498;
+	/* Selection is the inverse of the current surface by default */
+	--selection-background: var(--text-color);
+	--selection-color: var(--background-color);
 	height: 100%;
 	padding: 16px;
 	box-sizing: border-box;
@@ -42,6 +45,17 @@ body {
 	letter-spacing: 0.1em;
 	font-size: 26px;
 	height: 100%;
+}
+
+/* Selection stays readable on inverted surfaces (text already using the background color). */
+.inverted {
+	--selection-background: var(--background-color);
+	--selection-color: var(--text-color);
+}
+
+::selection {
+	background-color: var(--selection-background);
+	color: var(--selection-color);
 }
 
 body::after {

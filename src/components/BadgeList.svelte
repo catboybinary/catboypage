@@ -4,7 +4,7 @@
 </script>
 
 <div class="panel">
-    <div class="panel-header">
+    <div class="panel-header inverted">
         Friends
     </div>
 	<div class="badges">
@@ -19,7 +19,7 @@
 <style>
 	.badges {
 		gap: 16px;
-		max-height: calc(100dvh - 32px);
+		max-height: calc(100dvh - 70px);
 		padding: 8px 16px 8px 16px;
 		width: fit-content;
 		display: flex;
