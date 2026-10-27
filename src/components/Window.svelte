@@ -1,9 +1,9 @@
 <script lang="ts">
     import { draggable } from '@neodrag/svelte';
-    let { children, title = undefined, class: className = '' } = $props();
+    let { children, title = undefined, class: className = '', draggable: draggableSettings } = $props();
 </script>
 
-<div class="panel {className}" use:draggable={{ handle: '.panel-header' }}>
+<div class="panel {className}" use:draggable={draggableSettings}>
     {#if title}
         <div class="panel-header inverted">
             {title}

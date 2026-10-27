@@ -4,7 +4,7 @@
 	import Window from './Window.svelte';
 </script>
 
-<Window title="Friends" class="badges-window">
+<Window title="Friends" class="badges-window" draggable={{ handle: '.panel-header', bounds: 'html' }}>
 	<div class="badges">
     	{#each badges as badge (badge.id)}
     		<Button href={badge.href} showLines={false}>
