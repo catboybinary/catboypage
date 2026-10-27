@@ -1,17 +1,27 @@
 @import 'tailwindcss';
 
 html {
-	--background-color: #cfcaac;
-	--background-grid-color: #504c410f;
-	--primary-color: #d9d3b1;
-	--text-color: #504c41;
-	--text-shadow: #bab498;
-	/* Selection is the inverse of the current surface by default */
+	color-scheme: light dark;
+
+	--background-color: light-dark(#cfcaac, #3f3c34);
+	--background-grid-color: light-dark(#504c410f, #d9d3b10f);
+	--primary-color: light-dark(#d9d3b1, #504c41);
+	--text-color: light-dark(#504c41, #d9d3b1);
+	--text-shadow: light-dark(#bab498, #6f6b5a);
 	--selection-background: var(--text-color);
 	--selection-color: var(--background-color);
+
 	height: 100%;
 	padding: 16px;
 	box-sizing: border-box;
+}
+
+html[data-theme='light'] {
+	color-scheme: light;
+}
+
+html[data-theme='dark'] {
+	color-scheme: dark;
 }
 
 html,
@@ -27,16 +37,6 @@ body {
     box-shadow: 4px 4px var(--text-shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-	html {
-		--background-color: #3f3c34;
-		--background-grid-color: #d9d3b10f;
-		--primary-color: #504c41;
-		--text-color: #d9d3b1;
-		--text-shadow: #6f6b5a;
-	}
-}
-
 body {
 	background-color: var(--background-color);
 	color: var(--text-color);
@@ -46,6 +46,19 @@ body {
 	font-size: 26px;
 	height: 100%;
 }
+
+@property --selection-background {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #504c41;
+}
+
+@property --selection-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #cfcaac;
+}
+
 
 /* Selection stays readable on inverted surfaces (text already using the background color). */
 .inverted {

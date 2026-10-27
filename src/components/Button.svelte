@@ -1,10 +1,17 @@
 <script>
 	import { page } from '$app/stores';
-	let { href, label = undefined, children = undefined, showLines = true } = $props();
-	let active = $derived($page.url.pathname === href);
+	let {
+		href = undefined,
+		label = undefined,
+		children = undefined,
+		showLines = true,
+		onclick = undefined,
+		...rest
+	} = $props();
+	let active = $derived(href ? $page.url.pathname === href : false);
 </script>
 
-<a {href}>
+{#snippet content()}
 	<div class:active class:no-lines={!showLines}>
 		{#if children}
 			<span class="icon">{@render children()}</span>
@@ -13,9 +20,19 @@
 			<span class="label">{label}</span>
 		{/if}
 	</div>
-</a>
+{/snippet}
+
+{#if href}
+	<a {href} {...rest}>{@render content()}</a>
+{:else}
+	<button type="button" {onclick} {...rest}>{@render content()}</button>
+{/if}
 
 <style>
+    button {
+		cursor: pointer;
+	}
+
 	.icon {
 		color: var(--text-shadow);
 		transition:
@@ -56,7 +73,9 @@
 			background-size 0.175s,
 			color 0.1s,
 			margin-bottom 0.2s,
-			padding-bottom 0.2s;
+			padding-bottom 0.2s,
+			--selection-background 0.175s,
+			--selection-color 0.175s;
 		width: fit-content;
 		line-height: 1em;
 		min-width: var(--min-width);
@@ -140,7 +159,7 @@
 	@media (max-width: 848px) {
 		div {
 			font-size: 1.25rem;
-			padding: 0.4rem 0.5rem;
+			padding: 0.4rem;
 			min-width: var(--min-width-mobile, auto);
 		}
 
