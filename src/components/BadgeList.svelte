@@ -10,18 +10,21 @@
 	<div class="badges">
     	{#each badges as badge (badge.id)}
     		<Button href={badge.href} showLines={false}>
-    			<img style="image-rendering: pixelated;" src={badge.src} width="88" height="31" alt={badge.name} />
+    			<img class="badge" style="image-rendering: pixelated;" src={badge.src} width="88" height="31" alt={badge.name} />
     		</Button>
     	{/each}
 	</div>
 </div>
 
 <style>
+    .panel {
+        width: max-content;
+    }
+
 	.badges {
 		gap: 16px;
 		max-height: calc(100dvh - 70px);
 		padding: 8px 16px 8px 16px;
-		width: fit-content;
 		display: flex;
 		flex-flow: column;
 		overflow-y: scroll;
@@ -44,6 +47,10 @@
 	}
 
 	@media (max-width: 848px) {
+        .panel {
+            width: fit-content;
+        }
+
 		.badges {
 			max-height: none;
 			padding: 16px;

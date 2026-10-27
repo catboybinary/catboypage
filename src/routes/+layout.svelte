@@ -86,8 +86,8 @@
 <style>
 	.theme-toggle {
 		position: fixed;
-		top: 8px;
-		right: 8px;
+		top: 16px;
+		right: 16px;
 	}
 
 	.theme-icon.moon {
