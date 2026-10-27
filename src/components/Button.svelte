@@ -122,7 +122,7 @@
 
 	div.active {
 		margin-bottom: calc(0px - var(--header-gap, 0px));
-		padding-bottom: calc(0.6rem + var(--header-gap, 0px));
+		padding-bottom: calc(0.3em + var(--header-gap, 0px));
 		background-size: 100% 100%;
 		color: var(--primary-color);
 		animation: pulse 2s ease-in-out infinite;
