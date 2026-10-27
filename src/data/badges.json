@@ -8,13 +8,13 @@
 		},
 		{
 			"id": 1,
-			"src": "/images/badges/jsopn.gif",
+			"src": "/images/badges/jsopn.webp",
 			"href": "https://jsopn.com/?glunging=true",
 			"name": "jsopn"
 		},
 		{
 			"id": 2,
-			"src": "/images/badges/senkodev.gif",
+			"src": "/images/badges/senko.webp",
 			"href": "https://senko.dev/",
 			"name": "senkodev"
 		},
@@ -50,7 +50,7 @@
 		},
 		{
 			"id": 8,
-			"src": "/images/badges/tarakoshka.gif",
+			"src": "/images/badges/tarakoshka.webp",
 			"href": "https://tarakoshka.tech/",
 			"name": "tarakoshka"
 		},
@@ -68,7 +68,7 @@
 		},
 		{
 			"id": 11,
-			"src": "/images/badges/belomaxorka_rack.gif",
+			"src": "/images/badges/belomaxorka_rack.webp",
 			"href": "https://belomaxorka.dev/",
 			"name": "belomaxorka"
 		},

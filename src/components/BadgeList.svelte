@@ -1,12 +1,10 @@
 <script>
 	import { badges } from '../data/badges.json';
 	import Button from './Button.svelte';
+	import Window from './Window.svelte';
 </script>
 
-<div class="panel">
-    <div class="panel-header inverted">
-        Friends
-    </div>
+<Window title="Friends" class="badges-window">
 	<div class="badges">
     	{#each badges as badge (badge.id)}
     		<Button href={badge.href} showLines={false}>
@@ -14,17 +12,17 @@
     		</Button>
     	{/each}
 	</div>
-</div>
+</Window>
 
 <style>
-    .panel {
-        width: max-content;
+    :global(.badges-window) {
+        min-width: max-content;
     }
 
 	.badges {
 		gap: 16px;
 		max-height: calc(100dvh - 70px);
-		padding: 8px 16px 8px 16px;
+		padding: 16px 16px 16px 16px;
 		display: flex;
 		flex-flow: column;
 		overflow-y: scroll;
@@ -40,15 +38,9 @@
 		break-inside: avoid;
 	}
 
-	.panel-header {
-	    background-color: var(--text-color);
-		color: var(--background-color);
-		padding: 0px 16px 0px 16px;
-	}
-
 	@media (max-width: 848px) {
-        .panel {
-            width: fit-content;
+    	:global(.badges-window) {
+            min-width: fit-content;
         }
 
 		.badges {

@@ -67,10 +67,6 @@
 	<title>catboybinary</title>
 </svelte:head>
 
-<div class="theme-toggle">
-	<Button onclick={toggleTheme} aria-label="Toggle color theme" children={themeIcon} showLines={false} />
-</div>
-
 <div class="page">
 	<div class="layout panel panel-shadow">
 		<Header />
@@ -81,6 +77,10 @@
 	<div class="wrapper">
 		<BadgeList />
 	</div>
+</div>
+
+<div class="theme-toggle">
+	<Button onclick={toggleTheme} aria-label="Toggle color theme" children={themeIcon} showLines={false} />
 </div>
 
 <style>
