@@ -12,7 +12,7 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <div class="page">
-	<div class="layout panel">
+	<div class="layout panel panel-shadow">
 		<Header />
 		<div class="content">{@render children()}</div>
 		<Footer />

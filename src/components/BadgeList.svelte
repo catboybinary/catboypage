@@ -1,22 +1,26 @@
 <script>
-	import TabButton from './TabButton.svelte';
 	import { badges } from '../data/badges.json';
+	import Button from './Button.svelte';
 </script>
 
 <div class="panel">
-	<p style="font-family: 'ITC Benguiat Book'; letter-spacing: 0.15rem; font-size: 32px;">frens:</p>
-	{#each badges as badge (badge.id)}
-		<TabButton href={badge.href}>
-			<img style="image-rendering: pixelated;" src={badge.src} alt="" />
-		</TabButton>
-	{/each}
+    <div class="panel-header">
+        Friends
+    </div>
+	<div class="badges">
+    	{#each badges as badge (badge.id)}
+    		<Button href={badge.href} showLines={false}>
+    			<img style="image-rendering: pixelated;" src={badge.src} width="88" height="31" alt={badge.name} />
+    		</Button>
+    	{/each}
+	</div>
 </div>
 
 <style>
-	div {
+	.badges {
 		gap: 16px;
 		max-height: calc(100dvh - 32px);
-		padding: 16px;
+		padding: 8px 16px 8px 16px;
 		width: fit-content;
 		display: flex;
 		flex-flow: column;
@@ -28,13 +32,19 @@
 		animation: expand 0.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 	}
 
-	div :global(a) {
+	.badges :global(a) {
 		display: block;
 		break-inside: avoid;
 	}
 
+	.panel-header {
+	    background-color: var(--text-color);
+		color: var(--background-color);
+		padding: 0px 16px 0px 16px;
+	}
+
 	@media (max-width: 848px) {
-		div {
+		.badges {
 			max-height: none;
 			padding: 16px;
 			gap: 16px 8px;
@@ -42,13 +52,9 @@
 			flex-flow: wrap;
 			justify-content: center;
 			overflow-y: visible;
-
-			p {
-				display: none;
-			}
 		}
 
-		div :global(a) {
+		.badges :global(a) {
 			margin-bottom: 0;
 		}
 	}

@@ -1,5 +1,5 @@
 <script>
-	import TabButton from './TabButton.svelte';
+	import Button from './Button.svelte';
 
 	let prev = $state({
 		label: '...',
@@ -79,9 +79,9 @@
 {/snippet}
 
 <div>
-	<TabButton {...prev} children={leftIcon} />
-	<TabButton label="OTORING" children={webringIcon} href="https://webring.otomir23.me/" />
-	<TabButton {...next} children={rightIcon} />
+	<Button {...prev} children={leftIcon} />
+	<Button label="OTORING" children={webringIcon} href="https://webring.otomir23.me/" />
+	<Button {...next} children={rightIcon} />
 </div>
 
 <style>

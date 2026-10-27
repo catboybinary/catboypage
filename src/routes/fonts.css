@@ -67,3 +67,43 @@
 	font-display: swap;
 	src: url('/fonts/benguiat/ITCBenguiatBook.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'MADE Evolve Sans';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('fonts/madeevolvesans/MadeEvolveSans-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/madeevolvesans/MadeEvolveSans-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/madeevolvesans/MadeEvolveSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/madeevolvesans/MadeEvolveSans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MADE Evolve Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/madeevolvesans/MadeEvolveSans-Bold.woff2') format('woff2');
+}

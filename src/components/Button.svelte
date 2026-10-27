@@ -1,11 +1,11 @@
 <script>
 	import { page } from '$app/stores';
-	let { href, label, children } = $props();
+	let { href, label = undefined, children = undefined, showLines = true } = $props();
 	let active = $derived($page.url.pathname === href);
 </script>
 
 <a {href}>
-	<div class:active>
+	<div class:active class:no-lines={!showLines}>
 		{#if children}
 			<span class="icon">{@render children()}</span>
 		{/if}
@@ -60,7 +60,7 @@
 		width: fit-content;
 		line-height: 1em;
 		min-width: var(--min-width);
-		letter-spacing: 0.125rem;
+		letter-spacing: 0.075em;
 		font-size: 2rem;
 		position: relative;
 	}
@@ -126,8 +126,8 @@
 		}
 	}
 
-	div:not(.active):hover::before,
-	div:not(.active):hover::after {
+	div:not(.active):not(.no-lines):hover::before,
+	div:not(.active):not(.no-lines):hover::after {
 		background-color: var(--text-color);
 	}
 

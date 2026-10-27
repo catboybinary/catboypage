@@ -18,7 +18,10 @@ body {
 
 .panel {
 	background-color: var(--primary-color);
-	box-shadow: 4px 4px var(--text-shadow);
+}
+
+.panel-shadow {
+    box-shadow: 4px 4px var(--text-shadow);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,14 +37,11 @@ body {
 body {
 	background-color: var(--background-color);
 	color: var(--text-color);
-	font-family: 'InterVariable';
+	font-family: 'MADE Evolve Sans';
 	font-weight: 500;
-	font-size: 24px;
+	letter-spacing: 0.1em;
+	font-size: 26px;
 	height: 100%;
-}
-
-p {
-	font-family: 'Rubik';
 }
 
 body::after {
@@ -58,10 +58,16 @@ body::after {
 }
 
 h1 {
-	font-size: 3rem;
-	font-family: 'ITC Benguiat Book';
-	letter-spacing: 0.25rem;
-	text-shadow: var(--text-shadow) 0.15em 0.15em;
+	font-size: 48px;
+}
+
+.fancy {
+    font-family: 'ITC Benguiat Book';
+	letter-spacing: 0.15em;
+}
+
+.fancy-shadow {
+    text-shadow: var(--text-shadow) 0.15em 0.15em;
 }
 
 @media (max-width: 848px) {

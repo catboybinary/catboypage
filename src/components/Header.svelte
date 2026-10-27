@@ -1,5 +1,5 @@
 <script>
-	import TabButton from './TabButton.svelte';
+	import Button from './Button.svelte';
 </script>
 
 {#snippet homeIcon()}
@@ -18,7 +18,7 @@
 {/snippet}
 
 <div>
-	<TabButton href="/" children={homeIcon} label="HOME" />
+	<Button href="/" children={homeIcon} label="HOME" />
 </div>
 
 <style>
