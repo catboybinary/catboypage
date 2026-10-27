@@ -9,7 +9,10 @@
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+    <link rel="icon" href={favicon} />
+    <title>catboybinary</title>
+</svelte:head>
 
 <div class="page">
 	<div class="layout panel panel-shadow">
