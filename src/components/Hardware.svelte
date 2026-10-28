@@ -42,6 +42,7 @@
 					{/each}
 				</span>
 			</p>
+			<hr/>
 		{/each}
 	</div>
 </Window>
@@ -51,7 +52,7 @@
 		padding: 8px 16px 16px 16px;
 		display: flex;
 		flex-direction: column;
-		row-gap: 16px;
+		row-gap: 8px;
 	}
 
 	p {

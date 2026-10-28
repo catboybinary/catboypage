@@ -1,7 +1,7 @@
 {
 	"motherboard": "ASRock B650 Pro RS WiFi",
 	"cpu": {
-		"name": "AMD Ryzen 5 7500F OEM",
+		"name": "AMD Ryzen 5 7500F",
 		"cores": 6,
 		"min_frequency": 3.7,
 		"max_frequency": 5.0
