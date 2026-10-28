@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { draggable } from '@neodrag/svelte';
+	import { Draggable } from '@neodrag/svelte';
 	let { children, title = undefined, class: className = '' } = $props();
+
+	const drag = new Draggable();
 
 	let collapsed = $state(false);
 
@@ -16,10 +18,11 @@
 	}
 </script>
 
-<div class="panel {className}" class:collapsed {@attach draggable()}>
+<div class="panel {className}" class:collapsed {...drag.attach}>
 	{#if title}
 		<div
 			class="panel-header inverted"
+			{...drag.handle()}
 			role="button"
 			tabindex="0"
 			aria-expanded={!collapsed}
