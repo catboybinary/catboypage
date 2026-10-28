@@ -25,28 +25,30 @@
 </script>
 
 {#snippet themeIcon()}
-	<svg class="theme-icon sun"
-    	xmlns="http://www.w3.org/2000/svg"
-    	width="16"
-    	height="16"
-    	viewBox="-3 -3 30 30"
-    	fill="none"
-    	stroke="currentColor"
-    	stroke-width="2.5"
-    	stroke-linecap="round"
-    	stroke-linejoin="round"
+	<svg
+		class="theme-icon sun"
+		xmlns="http://www.w3.org/2000/svg"
+		width="16"
+		height="16"
+		viewBox="-3 -3 30 30"
+		fill="none"
+		stroke="currentColor"
+		stroke-width="2.5"
+		stroke-linecap="round"
+		stroke-linejoin="round"
 	>
-    	<circle cx="12" cy="12" r="4"/>
-    	<path d="M12 2v2"/>
-    	<path d="M12 20v2"/>
-    	<path d="m4.93 4.93 1.41 1.41"/>
-    	<path d="m17.66 17.66 1.41 1.41"/>
-    	<path d="M2 12h2"/>
-    	<path d="M20 12h2"/>
-    	<path d="m6.34 17.66-1.41 1.41"/>
-    	<path d="m19.07 4.93-1.41 1.41"/>
+		<circle cx="12" cy="12" r="4" />
+		<path d="M12 2v2" />
+		<path d="M12 20v2" />
+		<path d="m4.93 4.93 1.41 1.41" />
+		<path d="m17.66 17.66 1.41 1.41" />
+		<path d="M2 12h2" />
+		<path d="M20 12h2" />
+		<path d="m6.34 17.66-1.41 1.41" />
+		<path d="m19.07 4.93-1.41 1.41" />
 	</svg>
-	<svg class="theme-icon moon"
+	<svg
+		class="theme-icon moon"
 		xmlns="http://www.w3.org/2000/svg"
 		width="24"
 		height="24"
@@ -57,7 +59,9 @@
 		stroke-linecap="round"
 		stroke-linejoin="round"
 	>
-		<path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
+		<path
+			d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+		/>
 	</svg>
 {/snippet}
 
@@ -79,7 +83,12 @@
 </div>
 
 <div class="theme-toggle">
-	<Button onclick={toggleTheme} aria-label="Toggle color theme" children={themeIcon} showLines={false} />
+	<Button
+		onclick={toggleTheme}
+		aria-label="Toggle color theme"
+		children={themeIcon}
+		showLines={false}
+	/>
 </div>
 
 <style>
@@ -104,21 +113,21 @@
 	}
 
 	:global(html[data-theme='light']) {
-    	.theme-icon.sun {
-        	display: flex;
-    	}
-        .theme-icon.moon {
-    		display: none;
-    	}
+		.theme-icon.sun {
+			display: flex;
+		}
+		.theme-icon.moon {
+			display: none;
+		}
 	}
 
 	:global(html[data-theme='dark']) {
-        .theme-icon.sun {
-    		display: none;
-    	}
-        .theme-icon.moon {
-    		display: flex;
-    	}
+		.theme-icon.sun {
+			display: none;
+		}
+		.theme-icon.moon {
+			display: flex;
+		}
 	}
 
 	.page {

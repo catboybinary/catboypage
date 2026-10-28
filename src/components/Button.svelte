@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/state';
+	import { page } from '$app/store';
 	let {
 		href = undefined,
 		label = undefined,
@@ -8,7 +8,7 @@
 		onclick = undefined,
 		...rest
 	} = $props();
-	let active = $derived(href ? page.url.pathname === href : false);
+	let active = $derived(href ? $page.url.pathname === href : false);
 </script>
 
 {#snippet content()}
@@ -29,7 +29,7 @@
 {/if}
 
 <style>
-    button {
+	button {
 		cursor: pointer;
 	}
 

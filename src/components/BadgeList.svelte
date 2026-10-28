@@ -6,18 +6,25 @@
 
 <Window title="Friends" class="badges-window" draggable={{ handle: '.panel-header' }}>
 	<div class="badges">
-    	{#each badges as badge (badge.id)}
-    		<Button href={badge.href} showLines={false}>
-    			<img class="badge" style="image-rendering: pixelated;" src={badge.src} width="88" height="31" alt={badge.name} />
-    		</Button>
-    	{/each}
+		{#each badges as badge (badge.id)}
+			<Button href={badge.href} showLines={false}>
+				<img
+					class="badge"
+					style="image-rendering: pixelated;"
+					src={badge.src}
+					width="88"
+					height="31"
+					alt={badge.name}
+				/>
+			</Button>
+		{/each}
 	</div>
 </Window>
 
 <style>
-    :global(.badges-window) {
-        min-width: max-content;
-    }
+	:global(.badges-window) {
+		min-width: max-content;
+	}
 
 	.badges {
 		gap: 16px;
@@ -34,9 +41,9 @@
 	}
 
 	@media (max-width: 848px) {
-    	:global(.badges-window) {
-            min-width: fit-content;
-        }
+		:global(.badges-window) {
+			min-width: fit-content;
+		}
 
 		.badges {
 			max-height: none;

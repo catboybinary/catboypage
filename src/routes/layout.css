@@ -35,7 +35,7 @@ body {
 }
 
 .panel-shadow {
-    box-shadow: 4px 4px var(--text-shadow);
+	box-shadow: 4px 4px var(--text-shadow);
 }
 
 body {
@@ -49,17 +49,16 @@ body {
 }
 
 @property --selection-background {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #504c41;
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #504c41;
 }
 
 @property --selection-color {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #cfcaac;
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #cfcaac;
 }
-
 
 /* Selection stays readable on inverted surfaces (text already using the background color). */
 .inverted {
@@ -90,12 +89,12 @@ h1 {
 }
 
 .fancy {
-    font-family: 'ITC Benguiat Book';
+	font-family: 'ITC Benguiat Book';
 	letter-spacing: 0.15em;
 }
 
 .fancy-shadow {
-    text-shadow: var(--text-shadow) 0.15em 0.15em;
+	text-shadow: var(--text-shadow) 0.15em 0.15em;
 }
 
 @media (max-width: 848px) {
