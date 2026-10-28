@@ -4,7 +4,7 @@
 	import Window from './Window.svelte';
 </script>
 
-<Window title="Friends" class="badges-window" draggable={{ handle: '.panel-header', bounds: 'html' }}>
+<Window title="Friends" class="badges-window" draggable={{ handle: '.panel-header' }}>
 	<div class="badges">
     	{#each badges as badge (badge.id)}
     		<Button href={badge.href} showLines={false}>
@@ -26,11 +26,6 @@
 		display: flex;
 		flex-flow: column;
 		overflow-y: scroll;
-
-		transform-origin: top;
-
-		transform: scaleY(0);
-		animation: expand 0.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 	}
 
 	.badges :global(a) {

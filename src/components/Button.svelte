@@ -1,5 +1,5 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	let {
 		href = undefined,
 		label = undefined,
@@ -8,7 +8,7 @@
 		onclick = undefined,
 		...rest
 	} = $props();
-	let active = $derived(href ? $page.url.pathname === href : false);
+	let active = $derived(href ? page.url.pathname === href : false);
 </script>
 
 {#snippet content()}
