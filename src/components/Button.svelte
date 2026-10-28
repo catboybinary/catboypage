@@ -12,7 +12,7 @@
 </script>
 
 {#snippet content()}
-	<div class:active class:no-lines={!showLines}>
+	<div class="button" class:active class:no-lines={!showLines}>
 		{#if children}
 			<span class="icon">{@render children()}</span>
 		{/if}

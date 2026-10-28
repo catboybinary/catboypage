@@ -20,7 +20,7 @@
 	}
 </script>
 
-<div class="panel {className}" class:collapsed {...drag.attach}>
+<div class="main-window panel {className}" class:collapsed {...drag.attach}>
 	{#if title}
 		<div
 			class="panel-header inverted"
@@ -40,6 +40,10 @@
 </div>
 
 <style>
+	.main-window {
+		height: fit-content;
+	}
+
 	.window-contents {
 		transform-origin: top;
 		transform: scaleY(0);

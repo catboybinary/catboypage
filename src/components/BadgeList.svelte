@@ -4,7 +4,7 @@
 	import Window from './Window.svelte';
 </script>
 
-<Window title="Friends" class="badges-window">
+<Window title="Friends">
 	<div class="badges">
 		{#each badges as badge (badge.id)}
 			<Button href={badge.href} showLines={false}>
@@ -22,7 +22,7 @@
 </Window>
 
 <style>
-	:global(.badges-window) {
+	:global(.main-window) {
 		min-width: max-content;
 	}
 
@@ -41,7 +41,7 @@
 	}
 
 	@media (max-width: 848px) {
-		:global(.badges-window) {
+		:global(.main-window) {
 			min-width: fit-content;
 		}
 

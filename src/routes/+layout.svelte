@@ -6,6 +6,7 @@
 	import Footer from '../components/Footer.svelte';
 	import BadgeList from '../components/BadgeList.svelte';
 	import Button from '../components/Button.svelte';
+	import Hardware from '../components/Hardware.svelte';
 
 	let { children } = $props();
 
@@ -71,6 +72,8 @@
 </svelte:head>
 
 <div class="page">
+	<Hardware />
+
 	<div class="layout panel panel-shadow">
 		<Header />
 		<div class="content">{@render children()}</div>

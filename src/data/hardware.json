@@ -1,0 +1,24 @@
+{
+	"motherboard": "ASRock B650 Pro RS WiFi",
+	"cpu": {
+		"name": "AMD Ryzen 5 7500F OEM",
+		"cores": 6,
+		"min_frequency": 3.7,
+		"max_frequency": 5.0
+	},
+	"gpu": {
+		"name": "AMD Radeon RX 9060 XT",
+		"memory_gb": 16,
+		"bus_width": 128
+	},
+	"ram": {
+		"name": "Kingston FURY Beast",
+		"type": "DDR5",
+		"memory_gb": 16,
+		"amount": 1
+	},
+	"storage": {
+		"name": "Kingston NV3",
+		"capacity_gb": 1000
+	}
+}
