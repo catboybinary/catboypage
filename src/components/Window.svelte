@@ -1,9 +1,19 @@
+<script lang="ts" module>
+	let activeWindow: symbol | undefined = $state();
+</script>
+
 <script lang="ts">
 	import { Draggable, scrollLock } from '@neodrag/svelte';
 	let { children, title = undefined, class: className = '' } = $props();
 
+	const id = Symbol();
+	const raised = $derived(activeWindow === id);
+
 	const drag = new Draggable({
-		use: [scrollLock()]
+		use: [scrollLock()],
+		onDragStart() {
+			activeWindow = id;
+		}
 	});
 
 	let collapsed = $state(false);
@@ -20,7 +30,7 @@
 	}
 </script>
 
-<div class="main-window panel {className}" class:collapsed {...drag.attach}>
+<div class="main-window panel {className}" class:collapsed class:raised {...drag.attach}>
 	{#if title}
 		<div
 			class="panel-header inverted"
@@ -41,7 +51,13 @@
 
 <style>
 	.main-window {
+		position: relative;
 		height: fit-content;
+		z-index: 2;
+	}
+
+	.main-window.raised {
+		z-index: 3;
 	}
 
 	.window-contents {

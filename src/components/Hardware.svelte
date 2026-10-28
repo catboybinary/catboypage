@@ -42,7 +42,7 @@
 					{/each}
 				</span>
 			</p>
-			<hr/>
+			<hr />
 		{/each}
 	</div>
 </Window>
