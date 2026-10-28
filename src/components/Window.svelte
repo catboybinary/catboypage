@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { Draggable } from '@neodrag/svelte';
+	import { Draggable, scrollLock } from '@neodrag/svelte';
 	let { children, title = undefined, class: className = '' } = $props();
 
-	const drag = new Draggable();
+	const drag = new Draggable({
+		use: [scrollLock()]
+	});
 
 	let collapsed = $state(false);
 
