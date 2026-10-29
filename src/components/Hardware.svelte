@@ -1,48 +1,58 @@
 <script>
 	import Window from './Window.svelte';
 	import hardware from '../data/hardware.json';
+	import { CircuitBoard, Cpu, Gpu, HardDrive, MemoryStick } from '@lucide/svelte';
 
 	const lines = [
-		{ label: 'Mobo', name: hardware.motherboard, specs: [] },
+		{ label: 'Mobo', name: hardware.motherboard, specs: [], icon: CircuitBoard },
 		{
 			label: 'CPU',
 			name: hardware.cpu.name,
 			specs: [
 				`${hardware.cpu.cores} cores`,
 				`${hardware.cpu.min_frequency}-${hardware.cpu.max_frequency} GHz`
-			]
+			],
+			icon: Cpu
 		},
 		{
 			label: 'GPU',
 			name: hardware.gpu.name,
-			specs: [`${hardware.gpu.memory_gb} GB`, `${hardware.gpu.bus_width}-bit`]
+			specs: [`${hardware.gpu.memory_gb} GB`, `${hardware.gpu.bus_width}-bit`],
+			icon: Gpu
 		},
 		{
 			label: 'RAM',
 			name: hardware.ram.name,
-			specs: [hardware.ram.type, `${hardware.ram.memory_gb} GB x ${hardware.ram.amount}`]
+			specs: [hardware.ram.type, `${hardware.ram.memory_gb} GB x ${hardware.ram.amount}`],
+			icon: MemoryStick
 		},
 		{
 			label: 'Storage',
 			name: hardware.storage.name,
-			specs: [`${hardware.storage.capacity_gb} GB`]
+			specs: [`${hardware.storage.capacity_gb} GB`],
+			icon: HardDrive
 		}
 	];
 </script>
 
 <Window title="Hardware">
 	<div class="lines">
-		{#each lines as { label, name, specs } (label)}
+		{#each lines as { label, name, specs, icon: Icon }, index (label)}
 			<p>
-				<span class="label">{label}:</span>
+				<span class="label">
+					<Icon size={24} aria-hidden="true" />
+					{label}:
+				</span>
 				<span class="details">
-					<span>{name}</span>
+					<span> {name}</span>
 					{#each specs as spec (spec)}
 						<span>{spec}</span>
 					{/each}
 				</span>
 			</p>
-			<hr />
+			{#if index < lines.length - 1}
+				<hr />
+			{/if}
 		{/each}
 	</div>
 </Window>
@@ -63,8 +73,24 @@
 	}
 
 	.label {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		gap: 8px;
 		white-space: nowrap;
-		min-width: 120px;
+		min-width: 132px;
+	}
+
+	.label :global(svg) {
+		flex-shrink: 0;
+	}
+
+	hr {
+		width: 100%;
+		height: 0;
+		margin: 0;
+		border: none;
+		border-top: 2px solid var(--text-shadow);
 	}
 
 	.details {

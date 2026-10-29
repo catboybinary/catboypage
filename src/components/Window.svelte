@@ -38,7 +38,7 @@
 	}
 </script>
 
-<div class="main-window panel {className}" class:collapsed class:raised {...drag.attach}>
+<div class="main-window {className}" class:collapsed class:raised {...drag.attach}>
 	{#if title}
 		<div
 			class="panel-header inverted"
@@ -52,7 +52,7 @@
 			{title}
 		</div>
 	{/if}
-	<div class="window-contents">
+	<div class="window-contents panel">
 		{@render children()}
 	</div>
 </div>
@@ -74,12 +74,7 @@
 		animation: expand 0.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 	}
 
-	/*
-	 * Keep the contents laid out (rather than `display: none`) so the window
-	 * retains its width while collapsed. Removing them from the layout would
-	 * make the window shrink and shift the centred page horizontally.
-	 */
-	.panel.collapsed .window-contents {
+	.main-window.collapsed .window-contents {
 		height: 0;
 		overflow: hidden;
 		visibility: hidden;
