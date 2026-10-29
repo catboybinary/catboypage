@@ -85,14 +85,6 @@
 		flex-shrink: 0;
 	}
 
-	hr {
-		width: 100%;
-		height: 0;
-		margin: 0;
-		border: none;
-		border-top: 2px solid var(--text-shadow);
-	}
-
 	.details {
 		display: flex;
 		flex-direction: column;
