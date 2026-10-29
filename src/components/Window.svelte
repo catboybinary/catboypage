@@ -4,12 +4,20 @@
 
 <script lang="ts">
 	import { Draggable, scrollLock } from '@neodrag/svelte';
+	import { MediaQuery } from 'svelte/reactivity';
 	let { children, title = undefined, class: className = '' } = $props();
 
 	const id = Symbol();
 	const raised = $derived(activeWindow === id);
+	const isMobile = new MediaQuery('(max-width: 848px)');
 
 	const drag = new Draggable({
+		get disabled() {
+			return isMobile.current;
+		},
+		get touchAction() {
+			return isMobile.current ? false : undefined;
+		},
 		use: [scrollLock()],
 		onDragStart() {
 			activeWindow = id;
@@ -66,8 +74,17 @@
 		animation: expand 0.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 	}
 
+	/*
+	 * Keep the contents laid out (rather than `display: none`) so the window
+	 * retains its width while collapsed. Removing them from the layout would
+	 * make the window shrink and shift the centred page horizontally.
+	 */
 	.panel.collapsed .window-contents {
-		display: none;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+		animation: none;
+		transform: scaleY(0);
 	}
 
 	.panel-header {

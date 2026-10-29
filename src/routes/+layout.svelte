@@ -72,7 +72,9 @@
 </svelte:head>
 
 <div class="page">
-	<Hardware />
+	<div class="hardware">
+		<Hardware />
+	</div>
 
 	<div class="layout panel panel-shadow">
 		<Header />
@@ -142,6 +144,7 @@
 
 	.layout {
 		display: flex;
+		order: 2;
 		max-width: 848px;
 		min-width: 256px;
 		flex-direction: column;
@@ -149,9 +152,18 @@
 		padding: 16px;
 	}
 
-	.wrapper {
+	.wrapper,
+	.hardware {
 		width: fit-content;
 		align-self: flex-start;
+	}
+
+	.hardware {
+		order: 1;
+	}
+
+	.wrapper {
+		order: 3;
 	}
 
 	.content {
@@ -166,12 +178,22 @@
 			row-gap: 16px;
 		}
 
-		.wrapper {
+		.wrapper,
+		.hardware {
 			width: 100%;
 			align-self: auto;
 		}
 
+		.hardware {
+			order: 2;
+		}
+
+		.wrapper {
+			order: 3;
+		}
+
 		.layout {
+			order: 1;
 			min-width: 100%;
 			min-height: auto;
 		}
