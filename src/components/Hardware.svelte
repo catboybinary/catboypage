@@ -17,7 +17,7 @@
 		{
 			label: 'GPU',
 			name: hardware.gpu.name,
-			specs: [`${hardware.gpu.memory_gb} GB`, `${hardware.gpu.bus_width}-bit`],
+			specs: [`${hardware.gpu.vendor}`, `${hardware.gpu.memory_gb} GB`, `${hardware.gpu.bus_width}-bit`],
 			icon: Gpu
 		},
 		{

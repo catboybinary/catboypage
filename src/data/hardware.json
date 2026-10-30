@@ -8,6 +8,7 @@
 	},
 	"gpu": {
 		"name": "AMD Radeon RX 9060 XT",
+		"vendor": "PowerColor",
 		"memory_gb": 16,
 		"bus_width": 128
 	},
